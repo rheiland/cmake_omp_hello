@@ -14,6 +14,7 @@ if (OPENMP_FOUND)
     set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
 endif()
 #set(OpenMP_C_FLAG "-fopenmp=libomp -Wno-unused-command-line-argument")
-set(CMAKE_C_FLAGS "-std=c11 -Xpreprocessor -fopenmp -L/usr/local/lib -I/usr/local/include -lomp")
+#set(CMAKE_C_FLAGS "-std=c11 -Xpreprocessor -fopenmp -L/usr/local/lib -I/usr/local/include -lomp")
+set(CMAKE_C_FLAGS "-std=c11 -Xpreprocessor -fopenmp  -I/usr/local/include /usr/local/lib/libomp.a")
 
 add_executable(omp_hello omp_hello.c )
