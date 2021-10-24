@@ -1,0 +1,1 @@
+# cmake_omp_hello
