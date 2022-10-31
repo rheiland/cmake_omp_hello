@@ -1,0 +1,11 @@
+
+#CFLAGS := -march=$(ARCH) -g  -fomit-frame-pointer -Xpreprocessor -fopenmp -m64 -std=c++11
+CFLAGS := -march=$(ARCH)  -fomit-frame-pointer -Xpreprocessor -fopenmp -m64 -std=c++11
+PATH_TO_OMP := -L/usr/local/opt/libomp/lib
+
+on M1P:
+-r--r--r--  1 heiland  admin  684208 Jun 30 03:12 /opt/homebrew/opt/libomp/lib//libomp.dylib
+
+
+        $(COMPILE_COMMAND) $(PATH_TO_OMP) -lomp -o $(PROGRAM_NAME) $(ALL_OBJECTS) main.cpp
+
